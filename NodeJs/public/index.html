@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <title>Access Door</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <p class="h1">Door access</p>
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Timestamp</th>
+                        <th scope="col">Access</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(row, index) in data" :key="index">
+                        <th scope="row">{{index + 1}}</th>
+                        <td>{{row["Timestamp"]}}</td>
+                        <td>{{row["Access"]}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <script src="./script/vue.js"></script>
+    <script src="./script/jquery-3.3.1.slim.min.js"></script>
+    <script src="./script/popper.min.js"></script>
+    <script src="./script/bootstrap.min.js"></script>
+    <script src="./script/main.js"></script>
+</body>
+
+</html>
